@@ -14,38 +14,50 @@ Function open($this) {Start-Process $this}
 Function wait([int]$time) {Start-Sleep -Seconds $time}
 Function print($this) {Write-Host $this}
 # Print file to terminal 
-Function test {Get-Content ""}
+Function printFile {Get-Content ""}
 
 # Google search
-Function google {$this = $args; open("$GOOGLE$this"); clear}
+Function google {$this = $args; open("$GOOGLE$this")}
 
 # Open www website
 Function www($this) {open("www.$this")}
 # Open fav websites
-Function reddit {clear; open("www.reddit.com")}
-Function dev {clear; open("www.dev.to")}
-Function github {clear; open("www.github.com")}
+Function reddit {open("www.reddit.com")}
+Function dev {open("www.dev.to")}
+Function github {open("www.github.com")}
+Function dev {open("www.dev.to")}
+Function linked {open("www.linkedin.com")}
+Function insta {open("www.instagram.com")}
+Function facebook {open("www.facebook.com")}
+Function twitter {open("www.twitter.com")}
+# Open all social websites
+Function social {
+    facebook; wait(1);
+    insta; wait(1);
+    linked; wait(1);
+    dev; wait(1);
+    reddit; wait(1)
+}
 
 # Open fav apps
-Function text {clear; open($TEXT)}
-Function music {clear; open($MUSIC)}
-Function reason {clear; open($REASON)}
-Function chrome {clear; open($CHROME)}
+Function text {open($TEXT)}
+Function music {open($MUSIC)}
+Function reason {open($REASON)}
+Function chrome {open($CHROME)}
 
 # Open office apps 
-Function note {clear; open($ONENOTE)}
-Function outlook {clear; open($OUTLOOK)}
-Function excel {clear; open($EXCEL)}
+Function note {open($ONENOTE)}
+Function outlook {open($OUTLOOK)}
+Function excel {open($EXCEL)}
 # Open all office apps
-Function office {clear; outlook; wait(1); note; wait(1); finance}
+Function office {outlook; wait(1); note; wait(1); finance}
 
 # Open files
-Function finance {open($FINANCE); clear}
+Function finance {open($FINANCE)}
 
 # Basic loop
 Function loop { 
     for ($i = 1; $i -lt 11; $i++) { 
-        clear
         print($i)
         wait(1)
     }

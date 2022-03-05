@@ -5,5 +5,5 @@ Start-Job -FilePath $home\Documents\WindowsPowerShell\threads.ps1
 Function Prompt {"`n:)~ "}
 Function lf {Get-Command -Module X}
 Function cc {Set-Location $home}
-Function power {Set-Location "$home\Documents\WindowsPowerShell"}
+Function profile {Set-Location "$home\Documents\WindowsPowerShell"}
 Function work {Set-Location "$home\OneDrive\Work"}
