@@ -15,6 +15,15 @@ Function wait([int]$time) {Start-Sleep -Seconds $time}
 Function print($this) {Write-Host $this}
 # Print file to terminal 
 Function printFile {Get-Content ""}
+# Git save
+Function save() {
+    $this = $args;
+    git add -A;
+    wait(1);
+    git commit -m "$this";
+    wait(1);
+    git push -u origin main;
+}
 
 # Google search
 Function google {$this = $args; open("$GOOGLE$this")}
@@ -22,6 +31,10 @@ Function google {$this = $args; open("$GOOGLE$this")}
 # Open www website
 Function www($this) {open("www.$this")}
 # Open fav websites
+Function chase {open("www.chase.com")}
+Function tbt {open("https://tbtmyway.texasbankandtrust.com/login")}
+# Open FI
+Function money {chase; wait(1); tbt; wait(1)}
 Function reddit {open("www.reddit.com")}
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
@@ -36,7 +49,8 @@ Function social {
     insta; wait(1);
     linked; wait(1);
     dev; wait(1);
-    reddit; wait(1)
+    reddit; wait(1);
+    twitter: wait(1);
 }
 
 # Open fav apps
