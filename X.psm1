@@ -15,6 +15,10 @@ Function wait([int]$time) {Start-Sleep -Seconds $time}
 Function print($this) {Write-Host $this}
 # Print file to terminal 
 Function printFile {Get-Content ""}
+
+# Git functions
+# Git status
+Function status() {git status}
 # Git save
 Function save() {
     $this = $args;
