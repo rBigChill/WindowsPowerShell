@@ -19,8 +19,8 @@ Function printFile {Get-Content ""}
 # Git functions
 # Git status
 Function status() {git status}
-# Git save
-Function save() {
+# Git push
+Function push() {
     $this = $args;
     git add -A;
     wait(1);
@@ -28,25 +28,28 @@ Function save() {
     wait(1);
     git push -u origin main;
 }
+# Git pull
+Function pull {git pull}
 
 # Google search
 Function google {$this = $args; open("$GOOGLE$this")}
 
 # Open www website
 Function www($this) {open("www.$this")}
-# Open fav websites
+# Open FI
 Function chase {open("www.chase.com")}
 Function tbt {open("https://tbtmyway.texasbankandtrust.com/login")}
-# Open FI
 Function money {chase; wait(1); tbt; wait(1)}
+# Open fav websites
 Function reddit {open("www.reddit.com")}
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
 Function dev {open("www.dev.to")}
 Function linked {open("www.linkedin.com")}
+Function twitter {open("www.twitter.com")}
+# Open social sites
 Function insta {open("www.instagram.com")}
 Function facebook {open("www.facebook.com")}
-Function twitter {open("www.twitter.com")}
 # Open all social websites
 Function social {
     facebook; wait(1);
