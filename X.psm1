@@ -46,20 +46,23 @@ Function google {$this = $args; open("$GOOGLE$this")}
 
 # Open www website
 Function www($this) {open("www.$this")}
+
 # Open FI
 Function chase {open("www.chase.com")}
 Function tbt {open("https://tbtmyway.texasbankandtrust.com/login")}
 Function money {chase; wait(1); tbt; wait(1)}
+
 # Open fav websites
-Function reddit {open("www.reddit.com")}
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
-Function dev {open("www.dev.to")}
-Function linked {open("www.linkedin.com")}
-Function twitter {open("www.twitter.com")}
+
 # Open social sites
+Function reddit {open("www.reddit.com")}
 Function insta {open("www.instagram.com")}
 Function facebook {open("www.facebook.com")}
+Function twitter {open("www.twitter.com")}
+Function linked {open("www.linkedin.com")}
+Function dev {open("www.dev.to")}
 # Open all social websites
 Function social {
     facebook; wait(1);
