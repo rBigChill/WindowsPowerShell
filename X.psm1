@@ -70,7 +70,7 @@ Function social {
     linked; wait(1);
     dev; wait(1);
     reddit; wait(1);
-    twitter: wait(1);
+    twitter; wait(1);
 }
 
 # Open fav apps
