@@ -40,6 +40,10 @@ Function push() {
 }
 # Git pull
 Function pull {git pull}
+Function clone {
+    $this=$args
+    git clone https://github.com/$this.git
+}
 
 # Google search
 Function google {$this = $args; open("$GOOGLE$this")}
