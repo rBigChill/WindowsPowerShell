@@ -51,11 +51,6 @@ Function google {$this = $args; open("$GOOGLE$this")}
 # Open www website
 Function www($this) {open("www.$this")}
 
-# Open FI
-Function chase {open("www.chase.com")}
-Function tbt {open("https://tbtmyway.texasbankandtrust.com/login")}
-Function money {chase; wait(1); tbt; wait(1)}
-
 # Open fav websites
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
