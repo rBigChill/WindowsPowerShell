@@ -13,11 +13,10 @@ $CHROME = "C:\Program Files\Google\Chrome\Application\chrome"
 Function open($this) {Start-Process $this}
 Function wait([int]$time) {Start-Sleep -Seconds $time}
 Function print($this) {Write-Host $this}
-# Print file to terminal 
 Function printFile {Get-Content ""}
 
 # Git functions
-# Git status
+# Initialize git
 Function init() {
     $this = $args
     git init; wait(1);
