@@ -8,6 +8,7 @@ $OUTLOOK = "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK"
 $EXCEL = "C:\Program Files\Microsoft Office\root\Office16\EXCEL"
 $FINANCE = "C:\Users\cisne\OneDrive\Documents\Finances.xlsx"
 $CHROME = "C:\Program Files\Google\Chrome\Application\chrome"
+$YOUTUBE = "https://www.youtube.com/results?search_query="
 
 # Repeated functions
 Function open($this) {Start-Process $this}
@@ -46,6 +47,14 @@ Function clone {
 
 # Google search
 Function google {$this = $args; open("$GOOGLE$this")}
+Function youtube {
+    $this = $args;
+    if ($this=" ") {
+        open("www.youtube.com")
+    }else{
+        open("$YOUTUBE$this")
+    }
+}
 
 # Open www website
 Function www($this) {open("www.$this")}
