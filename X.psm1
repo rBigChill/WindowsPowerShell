@@ -63,6 +63,33 @@ Function www($this) {open("www.$this")}
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
 
+# Open reading
+Function kindle {open("https://read.amazon.com/kindle-library?")}
+Function audible {open("https://www.audible.com/library/titles?ref=a_hp_t1_navTop_pl0&pf_rd_p=333ba162-b3f0-48f7-9720-155151309526&pf_rd_r=Y2Q9W4TV1J68B48VEYPQ")}
+Function el {open("https://b-ok.cc/")}
+Function humble {open("https://www.humblebundle.com/?hmb_source=navbar")}
+Function fanatical {open("https://www.fanatical.com/en/")}
+Function lg {open("http://libgen.rs/")}
+# Open all reading
+Function read {
+    kindle; wait(1);
+    audible; wait(1);
+    el; wait(1);
+    humble; wait(1);
+    fanatical; wait(1);
+    lg; wait(1);
+}
+# Open learning
+Function udemy {open("https://www.udemy.com/home/my-courses/learning/")}
+Function coursera {open("https://www.coursera.org/")}
+Function wondrium {open("https://www.wondrium.com/")}
+# Open all learning
+Function learn {
+    udemy; wait(1);
+    coursera; wait(1);
+    learn; wait(1);
+}
+
 # Open social sites
 Function reddit {open("www.reddit.com")}
 Function insta {open("www.instagram.com")}
