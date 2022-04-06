@@ -73,7 +73,6 @@ Function dev {open("www.dev.to")}
 Function tiktok {open("www.tiktok.com")}
 # Open all social websites
 Function social {
-    tiktok; wait(1);
     facebook; wait(1);
     insta; wait(1);
     linked; wait(1);
@@ -93,7 +92,12 @@ Function note {open($ONENOTE)}
 Function outlook {open($OUTLOOK)}
 Function excel {open($EXCEL)}
 # Open all office apps
-Function office {outlook; wait(1); note; wait(1); finance}
+Function office {
+    outlook; wait(1);
+    note; wait(1);
+    finance; wait(1);
+    text; wait(1)
+}
 
 # Open files
 Function finance {open($FINANCE)}
