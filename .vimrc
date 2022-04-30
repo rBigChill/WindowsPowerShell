@@ -23,8 +23,12 @@ set noshowmode
 set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+    Plug 'itchyny/lightline.vim'
+    Plug 'scrooloose/nerdtree'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'mattn/emmet-vim'
+    Plug 'vim-syntastic/syntastic'
+    Plug 'valloric/youcompleteme'
 
 call plug#end()
