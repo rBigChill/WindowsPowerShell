@@ -87,7 +87,7 @@ Function wondrium {open("https://www.wondrium.com/")}
 Function learn {
     udemy; wait(1);
     coursera; wait(1);
-    learn; wait(1);
+    wondrium; wait(1);
 }
 
 # Open social sites
