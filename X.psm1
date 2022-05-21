@@ -16,6 +16,8 @@ Function wait([int]$time) {Start-Sleep -Seconds $time}
 Function print($this) {Write-Host $this}
 Function printFile {Get-Content ""}
 
+Function su() {open powershell -verb runas}
+
 # Git functions
 # Initialize git
 Function init() {
