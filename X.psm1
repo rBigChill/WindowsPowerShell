@@ -82,15 +82,7 @@ Function read {
     lg; wait(1);
 }
 # Open learning
-Function udemy {open("https://www.udemy.com/home/my-courses/learning/")}
-Function coursera {open("https://www.coursera.org/")}
-Function wondrium {open("https://www.wondrium.com/")}
-# Open all learning
-Function learn {
-    udemy; wait(1);
-    coursera; wait(1);
-    wondrium; wait(1);
-}
+Function learn {open("https://www.coursera.org/")}
 
 # Open social sites
 Function reddit {open("www.reddit.com")}
