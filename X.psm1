@@ -18,6 +18,8 @@ Function printFile {Get-Content ""}
 
 Function su() {open powershell -verb runas}
 
+Function kali() {ssh -l kali 192.168.0.43}
+
 # Git functions
 # Initialize git
 Function init() {
