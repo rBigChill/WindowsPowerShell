@@ -96,6 +96,7 @@ Function dev {open("www.dev.to")}
 Function tiktok {open("www.tiktok.com")}
 # Open all social websites
 Function social {
+    tiktok; wait(1);
     facebook; wait(1);
     insta; wait(1);
     linked; wait(1);
