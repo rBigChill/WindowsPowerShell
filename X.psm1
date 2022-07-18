@@ -51,6 +51,11 @@ Function clone {
 
 # Google search
 Function google {$this = $args; open("$GOOGLE$this")}
+
+# Open www website
+Function www($this) {open("www.$this")}
+
+# Open youtube
 Function youtube {
     $this = $args;
     if ($this=" ") {
@@ -59,34 +64,9 @@ Function youtube {
         open("$YOUTUBE$this")
     }
 }
-
-# Open www website
-Function www($this) {open("www.$this")}
-
 # Open fav websites
 Function dev {open("www.dev.to")}
 Function github {open("www.github.com")}
-
-# Open reading
-Function kindle {open("https://read.amazon.com/kindle-library?")}
-Function audible {open("https://www.audible.com/library/titles?ref=a_hp_t1_navTop_pl0&pf_rd_p=333ba162-b3f0-48f7-9720-155151309526&pf_rd_r=Y2Q9W4TV1J68B48VEYPQ")}
-Function el {open("https://b-ok.cc/")}
-Function humble {open("https://www.humblebundle.com/?hmb_source=navbar")}
-Function fanatical {open("https://www.fanatical.com/en/")}
-Function lg {open("http://libgen.rs/")}
-# Open all reading
-Function read {
-    kindle; wait(1);
-    audible; wait(1);
-    el; wait(1);
-    humble; wait(1);
-    fanatical; wait(1);
-    lg; wait(1);
-}
-# Open learning
-Function learn {open("https://www.coursera.org/")}
-
-# Open social sites
 Function reddit {open("www.reddit.com")}
 Function insta {open("www.instagram.com")}
 Function facebook {open("www.facebook.com")}
@@ -96,6 +76,8 @@ Function dev {open("www.dev.to")}
 Function tiktok {open("www.tiktok.com")}
 # Open all social websites
 Function social {
+    github; wait(1);
+    youtube; wait(1);
     tiktok; wait(1);
     facebook; wait(1);
     insta; wait(1);
